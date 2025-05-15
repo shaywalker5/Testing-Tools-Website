@@ -44,4 +44,4 @@ This project was created to demonstrate end-to-end testing skills using Playwrig
 
 ## 📌 Why This Project?
 
-Bugs? I love catching them. This project let me practice real-world testing techniques with Playwright, and I’m excited to share it with anyone interested in how I approach quality assurance with purpose and detail.
+Bugs? I love catching them. This project lets me practice real-world testing techniques with Playwright, and I’m excited to share it with anyone interested in how I approach quality assurance with purpose and detail.
