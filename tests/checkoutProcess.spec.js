@@ -67,9 +67,6 @@ const alreadySignedInMessage = await page.getByText("Hello Jane Doe, you are alr
 await expect(alreadySignedInMessage).toBeVisible();
 });
 
-test('Validate website autofills the billing address accurately with information from user profile', async function ({page}) {    
-
-});
 
 test('Validate error message for each field.', async function ({page}) {    
 await page.goto('https://with-bugs.practicesoftwaretesting.com/#/');
@@ -101,7 +98,7 @@ const requiredFields = [
 });
 
 test.describe('Billing information validations ', () => {
-    test.describe.only('Validate address, city, state, and country accept a minimum of 3 characters and max of 32 characters', () => {    
+    test.describe('Validate address, city, state, and country accept a minimum of 3 characters and max of 32 characters', () => {    
         for (const { field, value, shouldBeValid } of minMaxData) {
             test(`Field: ${field} | Value: "${value}" | Expected: ${shouldBeValid ? 'Valid' : 'Invalid'}`, async function ({page}) {
               await page.goto('https://with-bugs.practicesoftwaretesting.com/#/');
@@ -120,7 +117,7 @@ test.describe('Billing information validations ', () => {
           }
 });
 
-    test.describe.only('Validate address field only allows alphabetic and numerical characters', () => {    
+    test.describe('Validate address field only allows alphabetic and numerical characters', () => {    
         for (const { value, valid } of addressData) {
             test(`Address input "${value}" should be ${valid ? 'valid' : 'invalid'}`, async function ({page}) {
               await navigateToBilling(page);
